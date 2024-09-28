@@ -1,0 +1,136 @@
+
+/* reset styles */
+
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --c1: #f30096;
+    --c2: #ff1acd;
+    --c3: #240218;
+    --c4: #0d23a3;
+}
+
+/* body */
+body{
+    display: flex;
+    justify-content: center;  /* center form in horizontal axis */
+    align-items: center; /* center from in vertical axis */
+    background-color: yellowgreen;
+    /* background image styles */
+    background-image: url(./background.png);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;  /* set body min height 100 view point */
+}
+
+/* login form */
+form{
+    opacity: 1;
+    background: transparent;
+    backdrop-filter: blur(4px);
+    border: solid 2px var(--c2);
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+    width: 350px;
+    border-radius: 1.5rem;
+    box-shadow: 8px 8px 10px var(--c3);
+    transition: all ease-in-out 0.8px;
+}
+
+/* login text */
+ form h1{
+    font-size: 2.2rem;
+    font-weight: 1000;
+    text-align: center;
+    margin: 10px;
+    color: var(--c1);
+}
+
+form h1 span{
+    color: var(--c4);
+}
+
+/* Uname and Upwd */
+input[type='text'],input[type='password']{
+    margin: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--c1);
+    outline: none;
+    border: none;
+    background: transparent;
+    padding-left: 4%;
+    transition: all ease-in-out 0.5s;
+}
+
+/* placholder */
+input[type='text']::placeholder, input[type='password']::placeholder{
+    color: var(--c1);
+}
+
+/* uderline */
+form .uname, form .pwd{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+form .uname{
+    margin-top: 15px;
+}
+
+.underline{
+    width: 93%;
+    height: 3px;
+    position: absolute;
+    bottom: 6px;
+    margin-left: 10px;
+    background-color: var(--c4);
+    border-radius: 50px;
+    transition: all ease 0.4s;
+}
+
+/* rem division */
+form .rem{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* remeber me and forgor password  */
+form .rem span, form .rem a{
+    margin: 10px;
+    color: var(--c3);
+}
+
+/* a hover */
+form .rem a:hover{
+    color: #3f092c;
+}
+
+/* Lonin(submit) Button */
+form input[type='submit']{
+    background-color: var(--c1);
+    color: var(--c4);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px var(--c3);
+    padding-bottom: 5px;
+    transition: all ease 0.5s;
+}
+
+/* LOGIN hover */
+form input[type='submit']:hover{
+    background-color: var(--c4);
+    color: var(--c1);
+    border: 2px #0044ff solid;
+}
